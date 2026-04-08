@@ -1,1 +1,1 @@
-Ceci est une fausse description des fonctionalités de l'app
+GeoPulse transforme les données GPS brutes provenant d'OwnTracks, d'Overland, de Dawarich, de GPSLogger, de Home Assistant et d'autres sources en une chronologie consultable de vos séjours, de vos déplacements et de vos habitudes de déplacement. Il fonctionne entièrement sur votre propre infrastructure et s'intègre à Immich afin que vos photos apparaissent directement sur l'historique de votre carte.

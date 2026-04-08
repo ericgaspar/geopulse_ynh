@@ -36,48 +36,30 @@ ram.runtime = "50M"
     [install.domain]
     type = "domain"
 
-    [install.path]
-    type = "path"
-    default = "/example"
-
     [install.init_main_permission]
     type = "group"
     default = "visitors"
-
-    [install.language]
-    ask.en = "Choose the application language"
-    ask.fr = "Choisissez la langue de l'application"
-    type = "select"
-    choices = ["fr", "en"]
-    default = "fr"
-
-    [install.admin]
-    type = "user"
-
-    [install.password]
-    help.en = "Use the help field to add an information for the admin about this question."
-    help.fr = "Utilisez le champ aide pour ajouter une information à l'intention de l'administrateur à propos de cette question."
-    type = "password"
 
 [resources]
 
     [resources.sources]
 
-    [resources.sources.back]
+    [resources.sources.backend]
+    rename = "geopulse-backend"
+    in_subdir = false
+    extract = false
     url = "https://github.com/tess1o/geopulse/releases/download/v1.25.0/geopulse-backend-native-amd64-1.25.0"
-    sha256 = "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
+    sha256 = "ec472e8e7d6d62dc2bf2fee519503d245e0b17f6c756bd1af8202b0e432957ad"
 
-    [resources.sources.front]
+    [resources.sources.frontend]
     url = "https://github.com/tess1o/geopulse/releases/download/v1.25.0/geopulse-frontend-1.25.0.tar.gz"
-    sha256 = "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
+    sha256 = "5d34442d09005731e15039ff4651598763c5a6acbdc69e2b1ca908ba424f2c68"
 
-    # autoupdate.strategy = "latest_github_tag"
+    autoupdate.strategy = "latest_github_release"
 
     [resources.system_user]
 
     [resources.install_dir]
-
-    [resources.data_dir]
 
     [resources.permissions]
     main.url = "/"
